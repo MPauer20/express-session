@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .login h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login input[type="text"],
+    .login input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .login button {
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .login button:hover {
+      background: #0056b3;
+    }
+    .login a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .login a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h2>Login</h2>
+    <!-- Corrigido: agora envia para /login com POST -->
+    <form action="/login" method="POST">
+      <input type="text" name="usuario" placeholder="Usuário" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="#">Esqueceu a senha?</a>
+  </div>
+</body>
+</html>
